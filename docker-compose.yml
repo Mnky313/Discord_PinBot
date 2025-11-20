@@ -1,0 +1,10 @@
+services:
+  pinbot:
+    container_name: PinBot
+    restart: unless-stopped
+    build: https://github.com/Mnky313/Discord_PinBot.git
+    env_file: .env
+    volumes:
+      - ./Config:/config
+    network_mode: host
+
